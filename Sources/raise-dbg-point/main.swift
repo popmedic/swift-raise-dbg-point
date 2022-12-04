@@ -2,7 +2,7 @@ import OSLog
 import Foundation
 
 // Example of creating your own logger
-let logger = Logger.init(subsystem: "raise-dbg-point", category: "Main")
+let logger = Logger.init(subsystem: "com.popmedic.raise-dbg-point", category: "Main")
 
 // Example of using the assertDebug function
 func run() {

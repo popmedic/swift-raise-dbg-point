@@ -56,6 +56,8 @@ public func assertBreakPoint(
     _ line: Int = #line,
     _ function: String = #function
 ) {
+    // only do something if it is a debug build, we want no op if not
+    #if DEBUG
     // format the message
     let msg = "\(msg) (function: \(function) [\(file), \(line)])\r\n"
     // convert message from UTF8 String to Data
@@ -81,4 +83,5 @@ public func assertBreakPoint(
     raise(SIGINT)
     // unregister our C function once done
     signal(SIGINT, SIG_DFL)
+    #endif
 }
