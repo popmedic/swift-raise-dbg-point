@@ -11,10 +11,10 @@ func run() {
     assertBreakPoint("print in base logger, if in a debugger this will trigger a breakpoint")
     // show it in standard error
     assertBreakPoint("print in stderr, if in a debugger this will trigger a breakpoint",
-                     assertBreakPoint: FileHandle.standardError)
+                     writer: FileHandle.standardError)
     // show it in the OSLog with our logger
     assertBreakPoint("print in our logger, if in a debugger this will trigger a breakpoint",
-                     assertBreakPoint: logger)
+                     writer: logger)
     print("finished.")
 }
 
