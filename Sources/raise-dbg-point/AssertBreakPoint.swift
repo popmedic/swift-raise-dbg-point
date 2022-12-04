@@ -12,7 +12,7 @@ import OSLog
 //     pointer passed in to `signal` handler require a global scope
 //     otherwise it does not know when to release the memory for them
 private var __assertBreakPointMessage = Data()
-private var __assertBreakPointWriter: AssertBreakPointWriteable = FileHandle.standardError
+private var __assertBreakPointWriter: AssertBreakPointWriteable = Logger()
 
 /// public protocol AssertBreakPointWriteable allows a pass in for where the asserter 
 ///   function should log an error when no debugger is attached to the 
