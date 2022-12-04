@@ -22,6 +22,12 @@ swift build
 lldb .build/debug/raise-dbg-point
 ```
 
+To run as a release build to see no-op
+
+```bash
+swift run -c release
+```
+
 You can also just load the project in Xcode, but remember you will not see the output if you use Xcode you will have to go to derived data and run from cmd if you want to see the trapping of the SIGINT from the command line.
 
 ### enjoy
