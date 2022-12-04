@@ -45,7 +45,7 @@ extension Logger: AssertBreakPointWriteable {
 /// 
 /// - Parameters:
 ///   - msg: String to be written to assertBreakPoint when no debugger is attached
-///   writer: AssertBreakPointWriteable to write msg
+///   - writer: AssertBreakPointWriteable to write msg
 ///   - file: File that the asserter was called from
 ///   - line: Line number in file that asserter was called from
 ///   - function: Function that called the asserter
